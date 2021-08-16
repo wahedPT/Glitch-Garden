@@ -15,7 +15,8 @@ public class OPtionsManager : MonoBehaviour
     {
         print(PlayerPrefsManager.GetMasterVolume());
         VOlslider.value = PlayerPrefsManager.GetMasterVolume();
-        audioManager = GameObject.FindObjectOfType<AudioManager>();
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+       // audioManager = GameObject.FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
